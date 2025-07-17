@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Recognition System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: url("{{ url_for('static', filename='fruits-bg.jpg') }}") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 50px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            color: #f5f1f1;
+        }
+
+        .upload-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            margin-top: 30px;
+            width: 400px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        label.upload-btn {
+            display: inline-block;
+            background: #ff6600;
+            color: white;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        label.upload-btn:hover {
+            background: #ff4500;
+        }
+
+        button {
+            background: #28a745;
+            color: white;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        #file-count {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fruit Recognition System</h1>
+    <div class="upload-box">
+        <h2>Upload images of fruits</h2>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="images" id="file-upload" multiple required>
+            <label for="file-upload" class="upload-btn">Choose Files</label>
+            <p id="file-count">No files chosen</p>
+            <br><br>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('file-upload');
+        const fileCount = document.getElementById('file-count');
+
+        fileInput.addEventListener('change', () => {
+            const count = fileInput.files.length;
+            fileCount.textContent = count > 0 ? `${count} file(s) selected` : 'No files chosen';
+        });
+    </script>
+</body>
+
+</html>
