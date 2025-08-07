@@ -54,7 +54,8 @@ Manual fruit classification in agriculture and retail is slow, error-prone, and 
 
 ## Flowchart
 
-![Flowchart](readme_uploads/flowchart.jpg)
+<img src="readme_uploads/flowchart.jpg" alt="Flowchart" width="200" height="800"/>
+
 
 ---
 
