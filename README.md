@@ -1,64 +1,124 @@
 # Fruit Recognition System
 
-A web-based deep learning project that identifies 9 different fruits using a Convolutional Neural Network (CNN) model built with TensorFlow and deployed via a Flask web application.
+A deep learning-based web application that classifies images of fruits with high accuracy using Convolutional Neural Networks (CNN). Built using TensorFlow, Flask, and HTML/CSS, this system serves as an intelligent tool for automated fruit identification and sorting.
+
+---
 
 ## Project Overview
 
-This project is designed to recognize and classify fruit images uploaded by users through a web interface. It leverages MobileNetV2, a lightweight and efficient CNN, to ensure high accuracy and performance. The system is suitable for use cases in agriculture, food processing, inventory management, and smart kitchens.
+This project demonstrates the application of deep learning in computer vision by recognizing and classifying **9 types of fruits** from user-uploaded images. It is designed as an end-to-end web solution integrating model training, backend deployment, and frontend UI.
+
+Developed as a part of the B.Tech Minor Project at **Government Engineering College, Palakkad**, under the guidance of **Dr. Sabitha S**, this project showcases our ability to translate AI theory into real-world applications.
 
 ---
 
 ## Objectives
 
-- Create a user-friendly web interface for image uploading.
-- Preprocess images to ensure consistency in model inputs.
-- Train a CNN (MobileNetV2) on a 9-class fruit dataset.
-- Integrate the trained model with a Flask-based web app.
-- Display fruit predictions and confidence scores to the user.
+- Build a fruit classification model using **MobileNetV2 (CNN)**
+- Preprocess and augment dataset to improve generalization
+- Integrate the trained model into a web application using Flask
+- Enable multi-image uploads with live predictions and confidence scores
+- Achieve and maintain high performance (≈98% accuracy)
 
 ---
 
-## Model Details
+## Problem Statement
 
-- **Architecture**: MobileNetV2 (100 layers frozen)
-- **Optimizer**: Adam
-- **Loss Function**: Categorical Crossentropy
-- **Training Strategy**:
-  - Data Augmentation: rotation, zoom, flip, shift
-  - EarlyStopping and ReduceLROnPlateau callbacks
-- **Accuracy Achieved**: ~98%
+Manual fruit classification in agriculture and retail is slow, error-prone, and labor-intensive. This project aims to **automate fruit recognition** to improve speed, accuracy, and scalability, thereby enhancing productivity and reducing costs in the fruit supply chain.
 
 ---
 
-## Fruits Recognized
+## Technology Stack
 
-- Apple
-- Banana
-- Guava
-- Mango
-- Orange
-- Papaya
-- Pineapple
-- Water Apple
-- Watermelon
+| Area            | Tools Used                            |
+|-----------------|----------------------------------------|
+| Model Training  | TensorFlow, Keras, MobileNetV2         |
+| IDEs            | Google Colab, VS Code                  |
+| Web Framework   | Flask (Python)                         |
+| UI/Frontend     | HTML5, CSS3, Bootstrap                 |
+| Dataset         | Kaggle (Custom-split for train/val/test) |
+| Deployment      | Localhost (Flask server)               |
 
 ---
 
-## Tools & Technologies
+## System Architecture
 
-| Tool       | Purpose                           |
-|------------|-----------------------------------|
-| **Kaggle** | Dataset sourcing & exploration    |
-| **Google Colab** | Model training using GPU      |
-| **VS Code** | Web development & integration     |
-| **TensorFlow** | Model building & training       |
-| **Flask**   | Backend web framework            |
-| **HTML/CSS** | Frontend design for webpages     |
+1. **Dataset Preparation** – 9 fruit classes, split into train/val/test
+2. **Model Training** – MobileNetV2 + Dense layers with Dropout
+3. **Model Saving** – Saved in `.h5` format
+4. **Flask Integration** – REST API to handle image upload and prediction
+5. **Frontend UI** – Stylish image uploader and result display
+6. **Output** – Displays predicted fruit and confidence score
 
 ---
 
 ## Results
 
-- **Confusion Matrix** and **classification report** used for performance evaluation
-- Excellent prediction accuracy on unseen test data
-- Real-time fruit classification with user-uploaded images
+- **Test Accuracy**: ~98%
+- **Precision/Recall**: High across all 9 classes
+- **Model Size**: Lightweight due to MobileNetV2
+- **Real-time Predictions**: Under 1 second per image
+
+Confusion matrices and training graphs illustrate strong convergence and low misclassification. The UI displays predictions with fruit images and confidence levels.
+
+---
+
+## Demo Screenshots
+
+<p float="left">
+  <img src="static/uploads/example1.png" width="240"/>
+  <img src="static/uploads/example2.png" width="240"/>
+  <img src="static/uploads/result.png" width="240"/>
+</p>
+
+> For local testing, run `app.py` and navigate to `http://localhost:5000`.
+
+---
+
+## Project Structure
+
+```bash
+Fruit_Recognition_System/
+│
+├── static/ # Uploaded images & background assets
+├── templates/ # HTML frontend (index.html, result.html)
+├── model/
+│ └── fruit_classifier_model.h5
+├── app.py # Flask web server
+├── train_model.ipynb # CNN training on Google Colab
+└── class_labels.json # Mappings of label to fruit name
+```
+
+---
+
+## How to Run
+
+```bash
+git clone https://github.com/SYam9876/Fruit_Recognition_System.git
+cd Fruit_Recognition_System
+pip install -r requirements.txt
+python app.py
+```
+
+---
+
+## Future Enhancements
+
+- Support for real-time webcam detection
+- Add more fruit classes and diverse datasets
+- Deploy on cloud (Heroku, Render, etc.)
+- Mobile app integration (Flutter or Android)
+
+---
+
+## License
+
+This project is intended for academic demonstration and learning purposes. Please contact the authors for further usage or adaptation.
+
+---
+
+## Connect
+
+If you're a recruiter or developer interested in AI, computer vision, or full-stack ML apps — feel free to connect!
+
+Email: syamkrishna.b2@gmail.com
