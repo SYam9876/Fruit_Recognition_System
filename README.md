@@ -8,8 +8,6 @@ A deep learning-based web application that classifies images of fruits with high
 
 This project demonstrates the application of deep learning in computer vision by recognizing and classifying **9 types of fruits** from user-uploaded images. It is designed as an end-to-end web solution integrating model training, backend deployment, and frontend UI.
 
-Developed as a part of the B.Tech Minor Project at **Government Engineering College, Palakkad**, under the guidance of **Dr. Sabitha S**, this project showcases our ability to translate AI theory into real-world applications.
-
 ---
 
 ## Objectives
@@ -54,8 +52,13 @@ Manual fruit classification in agriculture and retail is slow, error-prone, and 
 
 ## Flowchart
 
-<img src="readme_uploads/flowchart.jpg" alt="Flowchart" width="200" height="800"/>
+<p align="center">
+  <img src="readme_uploads/flowchart.jpg" alt="Flowchart" width="200" height="800"/>
+</p>
 
+<p align="center">
+  <em>Figure: Flowchart</em>
+</p>
 
 ---
 
@@ -66,17 +69,56 @@ Manual fruit classification in agriculture and retail is slow, error-prone, and 
 - **Model Size**: Lightweight due to MobileNetV2
 - **Real-time Predictions**: Under 1 second per image
 
-Confusion matrices and training graphs illustrate strong convergence and low misclassification. The UI displays predictions with fruit images and confidence levels.
+Confusion matrices and training graphs illustrate strong convergence and low misclassification.
+
+<br>
+
+<p align="center">
+  <img src="readme_uploads/Confusion matrix.png" alt="Confusion matrix" width="400" height="400"/>
+  <img src="readme_uploads/Parameters.png" alt="Parameters" width="500" height="1000"/>
+</p>
+
+<p align="center">
+  <em>Figure: Confusion Matrix and Evaluation Parameters</em>
+</p>
+
+<br>
+
+<p align="center">
+  <img src="readme_uploads/Accuracy and Loss of Training and validation.png" alt="Accuracy and Loss of Training and validation" width="1000" height="400"/>
+</p>
+
+<p align="center">
+  <em>Figure: Accuracy and Loss of Training and validation</em>
+</p>
 
 ---
 
 ## Demo Screenshots
 
-<p float="left">
-  <img src="static/uploads/example1.png" width="240"/>
-  <img src="static/uploads/example2.png" width="240"/>
-  <img src="static/uploads/result.png" width="240"/>
+The UI displays predictions with fruit images and confidence levels.
+
+<br>
+
+<p align="center">
+  <img src="readme_uploads/Landing Page.jpg" alt="Landing Page" width="1000" height="800"/>
 </p>
+
+<p align="center">
+  <em>Figure: Landing Page</em>
+</p>
+
+<br>
+
+<p align="center">
+  <img src="readme_uploads/Webpage Result.jpg" alt="Webpage Result" width="1000" height="800"/>
+</p>
+
+<p align="center">
+  <em>Figure: Result Displayed in Webpage</em>
+</p>
+
+<br>
 
 > For local testing, run `app.py` and navigate to `http://localhost:5000`.
 
