@@ -74,7 +74,7 @@ Confusion matrices and training graphs illustrate strong convergence and low mis
 <br>
 
 <p align="center">
-  <img src="readme_uploads/Confusion matrix.png" alt="Confusion matrix" width="400" height="400"/>
+  <img src="readme_uploads/Confusion matrix.png" alt="Confusion matrix" width="300" height="300"/>
   <img src="readme_uploads/Parameters.png" alt="Parameters" width="400" height="1000"/>
 </p>
 
