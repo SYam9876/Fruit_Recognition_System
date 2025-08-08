@@ -85,11 +85,11 @@ Confusion matrices and training graphs illustrate strong convergence and low mis
 <br>
 
 <p align="center">
-  <img src="readme_uploads/Accuracy and Loss of Training and validation.png" alt="Accuracy and Loss of Training and validation" width="1000" height="400"/>
+  <img src="readme_uploads/Accuracy and Loss of Training and validation.png" alt="Accuracy and Loss of Training and Validation" width="1000" height="400"/>
 </p>
 
 <p align="center">
-  <em>Figure: Accuracy and Loss of Training and validation</em>
+  <em>Figure: Accuracy and Loss of Training and Validation</em>
 </p>
 
 ---
